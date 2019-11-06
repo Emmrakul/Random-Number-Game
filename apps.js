@@ -1,4 +1,4 @@
-const myButton = document.querySelector('#button');
+const myButton = document.querySelector('button');
 let currentNumbers = [];
 
 
@@ -15,13 +15,13 @@ const getRandomNumbers = (x, limit) => {
 const printNumbers = (r) => {
     let output = '<ul><li>';
     output+= r.concat('</li><li>');
-    output+= '</li><ul>';
+    output+= '</li></ul>';
     document.getElementById('output').innerHTML = output;
-    }
 }
 
-myButton.addEventListener('click', () => {
-    currentNumbers = getRandomNumbers(10, 100);
-    printNumbers(currentNumbers);
-    };
+myButton.addEventListener('click', 
+    function() {
+        currentNumbers = getRandomNumbers(10, 100);
+        printNumbers(currentNumbers);
+    }
 );
