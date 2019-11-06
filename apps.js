@@ -1,4 +1,4 @@
-const myButton = document.querySelector('#button');
+const myButton = document.querySelector('button');
 let currentNumbers = [];
 
 
