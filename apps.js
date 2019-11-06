@@ -20,7 +20,7 @@ const printNumbers = (r) => {
 }
 
 myButton.addEventListener('click', 
-    function() => {
+    function() {
         currentNumbers = getRandomNumbers(10, 100);
         printNumbers(currentNumbers);
     }
