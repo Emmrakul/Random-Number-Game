@@ -19,8 +19,9 @@ const printNumbers = (r) => {
     document.getElementById('output').innerHTML = output;
 }
 
-myButton.addEventListener('click', () => {
-    currentNumbers = getRandomNumbers(10, 100);
-    printNumbers(currentNumbers);
+myButton.addEventListener('click', 
+    function() => {
+        currentNumbers = getRandomNumbers(10, 100);
+        printNumbers(currentNumbers);
     }
 );
