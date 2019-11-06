@@ -15,7 +15,7 @@ const getRandomNumbers = (x, limit) => {
 const printNumbers = (r) => {
     let output = '<ul><li>';
     output+= r.concat('</li><li>');
-    output+= '</li><ul>';
+    output+= '</li></ul>';
     document.getElementById('output').innerHTML = output;
 }
 
