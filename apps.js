@@ -17,7 +17,6 @@ const printNumbers = (r) => {
     output+= r.concat('</li><li>');
     output+= '</li><ul>';
     document.getElementById('output').innerHTML = output;
-    }
 }
 
 myButton.addEventListener('click', () => {
