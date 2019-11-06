@@ -22,5 +22,5 @@ const printNumbers = (r) => {
 myButton.addEventListener('click', () => {
     currentNumbers = getRandomNumbers(10, 100);
     printNumbers(currentNumbers);
-    };
+    }
 );
