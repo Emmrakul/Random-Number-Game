@@ -14,7 +14,7 @@ const getRandomNumbers = (x, limit) => {
 //prints the array (r) to an html list
 const printNumbers = (r) => {
     let output = '<ul><li>';
-    output+= r.concat('</li><li>');
+    output+= r.join('</li><li>');
     output+= '</li></ul>';
     document.getElementById('output').innerHTML = output;
 }
@@ -25,3 +25,9 @@ myButton.addEventListener('click',
         printNumbers(currentNumbers);
     }
 );
+
+const numberList = document.getElementsByTagName('li');
+
+for (i=0; i < numberList.length; i++) {
+    numberList[i].addEventListener('click', () => {numberList[i].style.color = 'green'});
+}
