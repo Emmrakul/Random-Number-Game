@@ -25,11 +25,7 @@ myButton.addEventListener('click',
         printNumbers(currentNumbers);
         numberList = document.getElementsByTagName('li');
         for (i = 0; i < numberList.length; i++) {
-           numberList[i].addEventListener('click', 
-                function() {
-                    numberList[i].style.color = 'green';
-                }
-           )
+           numberList[i].addEventListener('click', () => {this.style.color = 'green'});
         }
     }
 );
