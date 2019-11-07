@@ -23,11 +23,15 @@ myButton.addEventListener('click',
     function() {
         currentNumbers = getRandomNumbers(10, 100);
         printNumbers(currentNumbers);
+        clickingNumbers();
     }
 );
 
-const numberList = document.getElementsByTagName('li');
 
-for (i=0; i < numberList.length; i++) {
-    numberList[i].addEventListener('click', () => {numberList[i].style.color = 'green'});
+function clickingNumbers() {
+    let numberList = document.querySelectorAll('li');
+    for (i = 0; i < numberList.length; i++) {
+        numberList[i].addEventListener('click', () => { numberList[i].style.color = 'green'; });
+    }
 }
+
