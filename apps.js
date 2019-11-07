@@ -29,7 +29,7 @@ myButton.addEventListener('click',
 
 
 function clickingNumbers() {
-    let numberList = document.querySelectorAll('li');
+    let numberList = document.getElementsByTagName('li');
     for (i = 0; i < numberList.length; i++) {
         numberList[i].addEventListener('click', () => { numberList[i].style.color = 'green'; });
     }
