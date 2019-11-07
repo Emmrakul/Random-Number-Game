@@ -1,7 +1,3 @@
-const myButton = document.querySelector('button');
-let currentNumbers = [];
-
-
 // creates an array of (x) random numbers, between 0 and (limit)
 const getRandomNumbers = (x, limit) => {
     let numberArray = [];
@@ -19,19 +15,23 @@ const printNumbers = (r) => {
     document.getElementById('output').innerHTML = output;
 }
 
+const myButton = document.querySelector('button');
+let currentNumbers = getRandomNumbers(10, 100);
+let numberList;
+
 myButton.addEventListener('click', 
     function() {
         currentNumbers = getRandomNumbers(10, 100);
         printNumbers(currentNumbers);
-        clickingNumbers();
+        numberList = document.getElementsByTagName('li');
+        for (i = 0; i < numberList.length; i++) {
+           numberList[i].addEventListener('click', 
+                function() {
+                    numberList[i].style.color = 'green';
+                }
+           )
+        }
     }
 );
 
-
-function clickingNumbers() {
-    let numberList = document.getElementsByTagName('li');
-    for (i = 0; i < numberList.length; i++) {
-        numberList[i].addEventListener('click', () => { numberList[i].style.color = 'green'; });
-    }
-}
 
